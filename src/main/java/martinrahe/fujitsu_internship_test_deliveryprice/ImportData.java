@@ -61,7 +61,7 @@ public class ImportData {
     long timestamp;
 
     @Scheduled(cron = "${cron.expression:0 15 * * * *}")
-    public void importWeatherData() throws IOException, SAXException {
+    private void importWeatherData() throws IOException, SAXException {
         log.info("Importing weather data");
         Document doc = builder.parse(url.openStream());
         NodeList observations = doc.getElementsByTagName("observations");

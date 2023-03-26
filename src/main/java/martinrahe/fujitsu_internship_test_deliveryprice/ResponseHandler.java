@@ -40,7 +40,7 @@ public class ResponseHandler {
     private WPEFController wpefController;
 
     @GetMapping("/deliveryfee/{city}/{vehicle}/{datetime}")
-    String totalDeliveryFee(@PathVariable String city, @PathVariable String vehicle, @PathVariable LocalDateTime datetime) {
+    private String totalDeliveryFee(@PathVariable String city, @PathVariable String vehicle, @PathVariable LocalDateTime datetime) {
         ZoneId zoneId = ZoneId.systemDefault(); //uses the system timezone
         long timestamp = datetime.atZone(zoneId).toEpochSecond(); //extracts the unix timestamp
         if (!bestStationForLocation.containsKey(city)) {
@@ -68,7 +68,7 @@ public class ResponseHandler {
     }
 
     @GetMapping("/deliveryfee/{city}/{vehicle}")
-    String totalDeliveryFee(@PathVariable String city, @PathVariable String vehicle) {
+    private String totalDeliveryFee(@PathVariable String city, @PathVariable String vehicle) {
         return totalDeliveryFee(city, vehicle, LocalDateTime.now());
     }
 }

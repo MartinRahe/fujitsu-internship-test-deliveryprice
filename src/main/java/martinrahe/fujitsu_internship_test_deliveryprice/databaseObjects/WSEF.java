@@ -19,4 +19,12 @@ public class WSEF {
 
     @Column(nullable = false)
     private float wsef;
+
+    public float getMinspeed() {
+        return this.minspeed;
+    }
+
+    public float getWsef() {
+        return this.wsef;
+    }
 }

@@ -19,4 +19,12 @@ public class WPEF {
 
     @Column(nullable = false)
     private float wpef;
+
+    public String getPhenomenon() {
+        return this.phenomenon;
+    }
+
+    public float getWpef() {
+        return this.wpef;
+    }
 }

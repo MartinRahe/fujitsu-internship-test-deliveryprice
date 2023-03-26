@@ -19,4 +19,12 @@ public class ATEF {
 
     @Column(nullable = false)
     private float atef;
+
+    public float getMaxtemp() {
+        return this.maxtemp;
+    }
+
+    public float getAtef() {
+        return this.atef;
+    }
 }

@@ -1,0 +1,5 @@
+package martinrahe.fujitsu_internship_test_deliveryprice.errors;
+
+public class RBFNotFoundException extends RuntimeException {
+    public RBFNotFoundException() {}
+}
